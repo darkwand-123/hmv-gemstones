@@ -1,0 +1,903 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500&display=swap");
+
+:root {
+  --green: #12382c;
+  --green-dark: #0a2119;
+  --green-deep: #061711;
+  --ivory: #f6f2e9;
+  --stone: #e9e3d8;
+  --gold: #b39a68;
+  --text: #20231f;
+  --muted: #77786f;
+}
+
+.site {
+  overflow: hidden;
+  background: var(--ivory);
+  color: var(--text);
+}
+
+button {
+  cursor: pointer;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  height: 92px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+}
+
+.brand-mark {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: 6px;
+}
+
+.brand-subtitle {
+  margin-top: 5px;
+  font-size: 7px;
+  letter-spacing: 3px;
+  color: #c9b98d;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  margin-left: auto;
+  margin-right: 42px;
+}
+
+.nav-links a,
+.nav-enquire {
+  font-size: 10px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.nav-links a {
+  opacity: 0.85;
+  transition: opacity 0.25s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.5;
+}
+
+.nav-enquire {
+  padding: 12px 21px;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  background: transparent;
+  color: white;
+}
+
+.nav-enquire:hover {
+  background: white;
+  color: var(--green-dark);
+}
+
+.menu-button {
+  display: none;
+  padding: 4px;
+  border: 0;
+  background: transparent;
+  color: white;
+}
+
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/hero.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 18, 13, 0.9) 0%,
+      rgba(5, 18, 13, 0.58) 40%,
+      rgba(5, 18, 13, 0.16) 100%
+    );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: min(650px, 88%);
+  margin-left: 9%;
+  padding-top: 75px;
+}
+
+.eyebrow,
+.section-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  margin-bottom: 27px;
+  color: #d1bd8b;
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(70px, 8vw, 116px);
+  font-weight: 400;
+  line-height: 0.84;
+  letter-spacing: -3px;
+}
+
+.hero h1 em,
+h2 em,
+.enquiry-modal h3 em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.hero-description {
+  margin-top: 31px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #d9ddd4;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 36px;
+}
+
+.button {
+  min-height: 51px;
+  padding: 0 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: 0;
+  font-size: 10px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-light {
+  background: var(--ivory);
+  color: var(--green-dark);
+}
+
+.button-outline {
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  background: transparent;
+  color: white;
+}
+
+.button-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.hero-bottom {
+  position: absolute;
+  z-index: 2;
+  left: 9%;
+  bottom: 35px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #c9cec4;
+}
+
+.hero-line {
+  width: 43px;
+  height: 1px;
+  background: #c9b98d;
+}
+
+.introduction {
+  padding: 145px 25px 155px;
+  text-align: center;
+  background: var(--ivory);
+}
+
+.section-label {
+  color: #927d58;
+}
+
+.introduction h2,
+.collection h2,
+.about h2,
+.trust h2,
+.contact h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(52px, 6vw, 84px);
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -1.5px;
+}
+
+.introduction h2 {
+  margin-top: 27px;
+}
+
+.introduction-text {
+  max-width: 485px;
+  margin: 32px auto 0;
+  font-size: 13px;
+  line-height: 2;
+  color: var(--muted);
+}
+
+.collection {
+  padding: 125px 6% 135px;
+  background: var(--stone);
+}
+
+.section-heading {
+  max-width: 1280px;
+  margin: 0 auto 58px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.section-heading h2 {
+  margin-top: 17px;
+}
+
+.section-heading-text {
+  max-width: 320px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  line-height: 1.9;
+  color: #74756e;
+}
+
+.collection-grid {
+  max-width: 1280px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.gemstone-card {
+  display: block;
+}
+
+.gemstone-image {
+  position: relative;
+  height: 525px;
+  overflow: hidden;
+  background: #d5cec0;
+}
+
+.gemstone-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.gemstone-card:hover .gemstone-image img {
+  transform: scale(1.035);
+}
+
+.card-enquire {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  padding: 12px 17px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: rgba(6, 23, 17, 0.8);
+  color: white;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.gemstone-card:hover .card-enquire {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gemstone-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 2px;
+}
+
+.card-number {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #9a8560;
+}
+
+.gemstone-info h3 {
+  margin-top: 7px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 29px;
+  font-weight: 500;
+}
+
+.about {
+  min-height: 700px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--green);
+  color: white;
+}
+
+.about-image,
+.contact-image {
+  overflow: hidden;
+}
+
+.about-image img,
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-content {
+  padding: 100px 12%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-content h2 {
+  margin-top: 21px;
+}
+
+.about-content > p:not(.section-label) {
+  max-width: 425px;
+  margin-top: 29px;
+  font-size: 12px;
+  line-height: 2;
+  color: #c6d0c6;
+}
+
+.about-content > p + p {
+  margin-top: 14px;
+}
+
+.text-link {
+  width: fit-content;
+  margin-top: 36px;
+  padding: 0 0 9px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border: 0;
+  border-bottom: 1px solid #a18d62;
+  background: transparent;
+  color: white;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.trust {
+  padding: 145px 25px;
+  text-align: center;
+  background: var(--ivory);
+}
+
+.trust-inner {
+  max-width: 1120px;
+  margin: auto;
+}
+
+.trust h2 {
+  margin-top: 26px;
+}
+
+.trust-text {
+  max-width: 450px;
+  margin: 30px auto 0;
+  font-size: 13px;
+  line-height: 2;
+  color: var(--muted);
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 55px;
+  margin-top: 76px;
+  text-align: left;
+}
+
+.trust-grid div {
+  padding-top: 22px;
+  border-top: 1px solid #d4c8b5;
+}
+
+.trust-grid span {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #a18b65;
+}
+
+.trust-grid svg {
+  color: #a18b65;
+}
+
+.trust-grid h3 {
+  margin-top: 15px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 29px;
+  font-weight: 500;
+}
+
+.trust-grid p {
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+.contact {
+  min-height: 650px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--green-dark);
+  color: white;
+}
+
+.contact-content {
+  padding: 95px 12%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-content h2 {
+  margin-top: 21px;
+}
+
+.contact-content > p:not(.section-label) {
+  max-width: 400px;
+  margin-top: 29px;
+  font-size: 12px;
+  line-height: 1.9;
+  color: #c4cec4;
+}
+
+.contact-actions {
+  max-width: 400px;
+  margin-top: 34px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-actions button,
+.contact-actions a {
+  width: 100%;
+  padding: 18px 0;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: white;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.contact-actions a:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-actions button svg:last-child,
+.contact-actions a svg:last-child {
+  margin-left: auto;
+}
+
+.contact-location {
+  margin-top: 34px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  color: #c4cec4;
+}
+
+.contact-image {
+  min-height: 650px;
+}
+
+.footer {
+  padding: 62px 6% 30px;
+  text-align: center;
+  background: var(--green-deep);
+  color: #aeb9ae;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.footer p {
+  margin-top: 20px;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.footer-links {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
+.footer-links a {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  max-width: 1280px;
+  margin: 50px auto 0;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #1a3328;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.floating-whatsapp {
+  position: fixed;
+  z-index: 50;
+  right: 22px;
+  bottom: 22px;
+  width: 53px;
+  height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: #1b684a;
+  color: white;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.floating-whatsapp:hover {
+  transform: translateY(-3px);
+  background: #247957;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  background: rgba(4, 13, 10, 0.7);
+  backdrop-filter: blur(8px);
+}
+
+.enquiry-modal {
+  position: relative;
+  width: min(500px, 100%);
+  padding: 55px;
+  background: var(--ivory);
+  color: var(--text);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+}
+
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d2c8b8;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text);
+}
+
+.enquiry-modal h3 {
+  margin-top: 20px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 0.9;
+}
+
+.enquiry-modal > p:not(.section-label) {
+  margin-top: 25px;
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+.modal-whatsapp {
+  margin-top: 30px;
+  min-height: 50px;
+  padding: 0 22px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  border: 0;
+  background: var(--green);
+  color: white;
+  font-size: 10px;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+
+.modal-whatsapp svg:last-child {
+  margin-left: 5px;
+}
+
+@media (max-width: 800px) {
+
+  .navbar {
+    height: 75px;
+    padding: 0 22px;
+  }
+
+  .brand-mark {
+    font-size: 28px;
+  }
+
+  .nav-enquire {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+    margin-left: auto;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 75px;
+    left: 15px;
+    right: 15px;
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 9px 0;
+    background: rgba(6, 23, 17, 0.98);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 17px 25px;
+  }
+
+  .hero {
+    min-height: 100svh;
+  }
+
+  .hero-image {
+    background-position: center;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(5, 18, 13, 0.88),
+        rgba(5, 18, 13, 0.48)
+      );
+  }
+
+  .hero-content {
+    width: auto;
+    margin: 0 25px;
+    padding-top: 65px;
+  }
+
+  .eyebrow {
+    margin-bottom: 23px;
+  }
+
+  .hero h1 {
+    font-size: clamp(64px, 18vw, 90px);
+    letter-spacing: -2px;
+  }
+
+  .hero-description {
+    max-width: 310px;
+    font-size: 12px;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .hero-bottom {
+    left: 25px;
+    bottom: 27px;
+    font-size: 8px;
+  }
+
+  .hero-line {
+    width: 30px;
+  }
+
+  .introduction {
+    padding: 100px 25px;
+  }
+
+  .introduction h2,
+  .collection h2,
+  .about h2,
+  .trust h2,
+  .contact h2 {
+    font-size: clamp(51px, 15vw, 72px);
+  }
+
+  .collection {
+    padding: 90px 20px 100px;
+  }
+
+  .section-heading {
+    display: block;
+    margin-bottom: 45px;
+  }
+
+  .section-heading-text {
+    margin-top: 26px;
+  }
+
+  .collection-grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .gemstone-image {
+    height: 440px;
+  }
+
+  .card-enquire {
+    opacity: 1;
+    transform: none;
+  }
+
+  .about,
+  .contact {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image,
+  .contact-image {
+    min-height: 400px;
+    height: 400px;
+  }
+
+  .about-content,
+  .contact-content {
+    padding: 82px 25px;
+  }
+
+  .trust {
+    padding: 100px 25px;
+  }
+
+  .trust-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    margin-top: 58px;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .floating-whatsapp {
+    right: 16px;
+    bottom: 16px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .enquiry-modal {
+    padding: 45px 28px;
+  }
+
+  .enquiry-modal h3 {
+    font-size: 56px;
+  }
+
+  .modal-whatsapp {
+    width: 100%;
+    justify-content: center;
+  }
+}
