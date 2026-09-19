@@ -6,20 +6,33 @@
 
 html {
   scroll-behavior: smooth;
+  background: #061711;
 }
 
 body {
   margin: 0;
   min-width: 320px;
-  background: #f6f2e9;
+  background: #f5f1e8;
+  color: #18221e;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
 button,
 input,
-textarea {
+textarea,
+select {
   font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {
@@ -30,4 +43,9 @@ a {
 img {
   display: block;
   max-width: 100%;
+}
+
+::selection {
+  background: #c5a86a;
+  color: #061711;
 }
