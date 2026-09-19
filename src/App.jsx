@@ -184,7 +184,10 @@ function Home() {
           </p>
 
           <div className="hero-actions">
-            <Link to="/collection" className="primary-button">
+            <Link
+              to="/collection"
+              className="primary-button"
+            >
               Explore Emerald Collection
               <ArrowRight size={17} />
             </Link>
@@ -217,6 +220,7 @@ function AboutPreview() {
       <div className="section-container about-grid">
         <div className="section-label-column">
           <span className="section-number">01</span>
+
           <p className="eyebrow dark">
             ABOUT HMV GEMS
           </p>
@@ -262,6 +266,7 @@ function BusinessSection() {
         <img
           src="/images/hero.jpeg"
           alt="HMV Gems emerald collection"
+          loading="lazy"
         />
       </div>
 
@@ -396,7 +401,10 @@ function CollectionPreview() {
             </p>
           </div>
 
-          <Link to="/collection" className="text-link">
+          <Link
+            to="/collection"
+            className="text-link"
+          >
             View complete collection
             <ArrowRight size={16} />
           </Link>
@@ -427,6 +435,7 @@ function GemstoneCard({
         <img
           src={image}
           alt={title}
+          loading="lazy"
         />
       </div>
 
@@ -437,7 +446,10 @@ function GemstoneCard({
 
         <p>{description}</p>
 
-        <Link to="/contact" className="card-link">
+        <Link
+          to="/contact"
+          className="card-link"
+        >
           Enquire
           <ArrowRight size={15} />
         </Link>
@@ -479,7 +491,10 @@ function WhyChooseUs() {
 
         <div className="why-points">
           {points.map((point, index) => (
-            <div className="why-point" key={point}>
+            <div
+              className="why-point"
+              key={point}
+            >
               <span>
                 {String(index + 1).padStart(2, "0")}
               </span>
@@ -536,7 +551,10 @@ function CertificationSection() {
           </p>
 
           {laboratories.map((lab, index) => (
-            <div className="laboratory-item" key={lab}>
+            <div
+              className="laboratory-item"
+              key={lab}
+            >
               <span>
                 {String(index + 1).padStart(2, "0")}
               </span>
@@ -584,7 +602,10 @@ function ExhibitionsPreview() {
             </p>
           </div>
 
-          <Globe2 size={70} strokeWidth={1} />
+          <Globe2
+            size={70}
+            strokeWidth={1}
+          />
         </div>
 
         <div className="exhibition-grid">
@@ -603,7 +624,10 @@ function ExhibitionsPreview() {
         </div>
 
         <div className="exhibition-link-wrap">
-          <Link to="/exhibitions" className="text-link">
+          <Link
+            to="/exhibitions"
+            className="text-link"
+          >
             Explore exhibitions
             <ArrowRight size={16} />
           </Link>
@@ -811,7 +835,9 @@ function About() {
 
         <div className="about-stat">
           <span>30+</span>
+
           <p>Years of expertise</p>
+
           <small>
             Wholesale Emerald Trading & Manufacturing
           </small>
@@ -872,6 +898,7 @@ function Craftsmanship() {
           <img
             src="/images/hero.jpeg"
             alt="HMV Gems gemstone craftsmanship"
+            loading="lazy"
           />
         </div>
 
@@ -1007,6 +1034,7 @@ function Gallery() {
           <img
             src="/images/hero.jpeg"
             alt="HMV Gems"
+            loading="lazy"
           />
         </div>
 
@@ -1014,6 +1042,7 @@ function Gallery() {
           <img
             src="/images/gemstone-1.jpg"
             alt="Colombian Emeralds"
+            loading="lazy"
           />
         </div>
 
@@ -1021,6 +1050,7 @@ function Gallery() {
           <img
             src="/images/gemstone-2.jpg"
             alt="Zambian Emeralds"
+            loading="lazy"
           />
         </div>
 
@@ -1028,6 +1058,7 @@ function Gallery() {
           <img
             src="/images/gemstone-3.jpg"
             alt="Fine Gemstones"
+            loading="lazy"
           />
         </div>
       </section>
@@ -1133,13 +1164,19 @@ function ContactInfo({
       </span>
 
       <div>
-        <span className="contact-label">{label}</span>
+        <span className="contact-label">
+          {label}
+        </span>
 
         {href ? (
           <a
             href={href}
             target={external ? "_blank" : undefined}
-            rel={external ? "noreferrer" : undefined}
+            rel={
+              external
+                ? "noreferrer"
+                : undefined
+            }
           >
             {value}
           </a>
@@ -1170,7 +1207,9 @@ function PageShell({
         }}
       >
         <div className="page-hero-content">
-          <p className="eyebrow">{eyebrow}</p>
+          <p className="eyebrow">
+            {eyebrow}
+          </p>
 
           <h1>{title}</h1>
 
@@ -1192,7 +1231,10 @@ function Footer() {
     <footer className="footer">
       <div className="footer-top">
         <div className="footer-brand">
-          <Link to="/" className="footer-logo">
+          <Link
+            to="/"
+            className="footer-logo"
+          >
             HMV
             <span>GEMS</span>
           </Link>
