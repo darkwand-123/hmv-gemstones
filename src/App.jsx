@@ -193,12 +193,19 @@ function Home() {
       </section>
 
       <AboutPreview />
+
       <BusinessSection />
+
       <CollectionPreview />
+
       <WhyChooseUs />
+
       <CertificationSection />
+
       <ExhibitionsPreview />
+
       <ExportSection />
+
       <FinalCTA />
     </>
   );
@@ -395,19 +402,7 @@ function CollectionPreview() {
           </Link>
         </div>
 
-        <div
-          className="collection-grid"
-          style={{
-            display: "grid",
-            gridTemplateColumns:
-              "repeat(3, minmax(0, 1fr))",
-            gap: "28px",
-            alignItems: "start",
-            width: "calc(100% - 100px)",
-            maxWidth: "1450px",
-            margin: "0 auto",
-          }}
-        >
+        <div className="collection-grid">
           {gemstones.map((gemstone) => (
             <GemstoneCard
               key={gemstone.number}
@@ -427,34 +422,11 @@ function GemstoneCard({
   description,
 }) {
   return (
-    <article
-      className="gemstone-card"
-      style={{
-        width: "100%",
-        overflow: "hidden",
-      }}
-    >
-      <div
-        className="gemstone-image"
-        style={{
-          width: "100%",
-          height: "280px",
-          overflow: "hidden",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          background: "#eeeae1",
-        }}
-      >
+    <article className="gemstone-card">
+      <div className="gemstone-image">
         <img
           src={image}
           alt={title}
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "contain",
-            display: "block",
-          }}
         />
       </div>
 
@@ -782,19 +754,7 @@ function Collection() {
       description="We offer a wide range of natural emeralds sourced from the world’s most renowned mines."
     >
       <section className="collection-page">
-        <div
-          className="collection-page-grid"
-          style={{
-            display: "grid",
-            gridTemplateColumns:
-              "repeat(3, minmax(0, 1fr))",
-            gap: "28px",
-            alignItems: "start",
-            width: "calc(100% - 100px)",
-            maxWidth: "1450px",
-            margin: "0 auto",
-          }}
-        >
+        <div className="collection-page-grid">
           {gemstones.map((gemstone) => (
             <GemstoneCard
               key={gemstone.number}
@@ -1042,93 +1002,32 @@ function Gallery() {
       }
       description="Explore a selection of imagery representing our gemstones, origins and business."
     >
-      <section
-        className="gallery-page"
-        style={{
-          display: "grid",
-          gridTemplateColumns:
-            "repeat(3, minmax(0, 1fr))",
-          gap: "24px",
-          alignItems: "start",
-        }}
-      >
-        <div
-          className="gallery-item"
-          style={{
-            width: "100%",
-            height: "300px",
-            overflow: "hidden",
-          }}
-        >
+      <section className="gallery-page">
+        <div className="gallery-item">
           <img
             src="/images/hero.jpeg"
             alt="HMV Gems"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "contain",
-              display: "block",
-            }}
           />
         </div>
 
-        <div
-          className="gallery-item"
-          style={{
-            width: "100%",
-            height: "300px",
-            overflow: "hidden",
-          }}
-        >
+        <div className="gallery-item">
           <img
             src="/images/gemstone-1.jpg"
             alt="Colombian Emeralds"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "contain",
-              display: "block",
-            }}
           />
         </div>
 
-        <div
-          className="gallery-item"
-          style={{
-            width: "100%",
-            height: "300px",
-            overflow: "hidden",
-          }}
-        >
+        <div className="gallery-item">
           <img
             src="/images/gemstone-2.jpg"
             alt="Zambian Emeralds"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "contain",
-              display: "block",
-            }}
           />
         </div>
 
-        <div
-          className="gallery-item"
-          style={{
-            width: "100%",
-            height: "300px",
-            overflow: "hidden",
-          }}
-        >
+        <div className="gallery-item">
           <img
             src="/images/gemstone-3.jpg"
             alt="Fine Gemstones"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "contain",
-              display: "block",
-            }}
           />
         </div>
       </section>
